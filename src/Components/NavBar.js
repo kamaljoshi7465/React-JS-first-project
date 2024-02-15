@@ -66,8 +66,8 @@ class NavBar extends React.Component {
             <div style={{ marginTop: '15px', marginLeft: '50px' }}>
               <input type="checkbox" className="checkbox" id="checkbox" onChange={this.toggleDarkMode} />
               <label htmlFor="checkbox" className="checkbox-label">
-                <i className="fas fa-moon" />
                 <i className="fas fa-sun" />
+                <i className="fas fa-moon" />
                 <span className="ball" />
               </label>
             </div>
