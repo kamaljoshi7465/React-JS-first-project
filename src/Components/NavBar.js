@@ -26,7 +26,7 @@ class NavBar extends React.Component {
       <nav className="navbar border-bottom border-body" data-bs-theme={themeValue}>
         <nav className="navbar navbar-expand-lg bg-body-tertiary w-175 ">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#"><b>Personal Portfolio</b></a>
+            <a className="navbar-brand" href="#"><b>Apna Cart</b></a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon" />
             </button>

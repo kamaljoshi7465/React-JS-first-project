@@ -3,6 +3,7 @@ import NavBar from "./Components/NavBar.js";
 import ProductList from "./Components/ProductList.js";
 import Footer from "./Components/Footer.js";
 import React, { useState } from "react";
+import AddItem from "./Components/AddItem.js";
 
 function App() {
   const products = [
@@ -76,18 +77,29 @@ function App() {
 
   const removeItem = (index) => {
     let newProductList = [...productList];
-    newProductList.splice(index, 1);
-    setProductList(newProductList);
-
     let newTotalAmount = totalAmount;
     newTotalAmount -= newProductList[index].quantity * newProductList[index].price;
+
     setTotalAmount(newTotalAmount);
+    newProductList.splice(index, 1);
+    setProductList(newProductList);
+  }
+
+  const addItem = (name, price) => {
+    let newProductList = [...productList];
+    newProductList.push({
+      name: name,
+      price: price,
+      quantity: 0
+    })
+    setProductList(newProductList);
   }
 
   return (
     <>
       <NavBar />
       <main className="container mt-5">
+        <AddItem addItem={addItem} />
         <ProductList productList={productList}
           incrementQuantity={incrementQuantity}
           decrementQuantity={decrementQuantity}
